@@ -9,7 +9,7 @@ const Todolist = () => {
     localStorage.setItem('todoList', JSON.stringify(todolist));
 
     return (
-        <ul className='space-y-4'>
+        <ul className='w-full max-w-xs sm:max-w-sm space-y-4'>
             {todolist.map((todo, idx) => (
                 <TodoItem key={todo.id} todo={todo} />
             ))}
