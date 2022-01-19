@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  .App {
-    @apply flex justify-center items-start;
-  }
-}
-
 /* cyrillic-ext */
 @font-face {
   font-family: "Ubuntu";
