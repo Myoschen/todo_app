@@ -13,19 +13,24 @@
       "sizes": "48x48"
     },
     {
-      "src": "icon@x64.png",
+      "src": "icon@x72.png",
       "type": "image/png",
-      "sizes": "64x64"
+      "sizes": "72x72"
     },
     {
-      "src": "icon@x128.png",
+      "src": "icon@x96.png",
       "type": "image/png",
-      "sizes": "128x128"
+      "sizes": "96x96"
     },
     {
-      "src": "icon@x256.png",
+      "src": "icon@x144.png",
       "type": "image/png",
-      "sizes": "256x256"
+      "sizes": "144x144"
+    },
+    {
+      "src": "icon@x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
     },
     {
       "src": "icon@x512.png",
