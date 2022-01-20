@@ -1,13 +1,15 @@
 import React from 'react'
-import { useAppSelector } from '../hooks'
 import TodoItem from './TodoItem'
+import { todo } from '../redux/slice/todo'
 
-const Todolist = () => {
-    const todolist = useAppSelector(state => state.todo.todolist)
-    
+interface TodolistProps {
+    todo: todo[],
+}
+
+const Todolist = (props: TodolistProps) => {
     return (
         <ul className='w-full max-w-xs sm:max-w-sm my-8 space-y-4'>
-            {todolist.map((todo, idx) => (
+            {props.todo.map((todo, idx) => (
                 <TodoItem key={todo.id} todo={todo} />
             ))}
         </ul>

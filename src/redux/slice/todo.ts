@@ -1,9 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { v4 as uuidv4 } from 'uuid';
 
-interface todo {
+export interface todo {
     id: string,
     todo: string,
+    checked: boolean,
 }
 
 interface todolist {
@@ -19,7 +20,7 @@ export const todoSlice = createSlice({
     initialState,
     reducers: {
         addTodo: (state, action) => {
-            state.todolist.push({id: uuidv4(), todo: action.payload})
+            state.todolist.push({id: uuidv4(), todo: action.payload, checked: false})
         },
         removeTodo: (state, action) => {
             state.todolist = state.todolist.filter(todo => todo.id !== action.payload)

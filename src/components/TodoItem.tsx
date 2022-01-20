@@ -2,11 +2,7 @@ import React from 'react'
 import { removeTodo } from '../redux/slice/todo';
 import { useAppDispatch } from '../hooks';
 import { ImCross } from 'react-icons/im';
-
-interface todo {
-    id: string,
-    todo: string,
-}
+import { todo } from "../redux/slice/todo";
 
 interface TodoItemProps {
     todo: todo
