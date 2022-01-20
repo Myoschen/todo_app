@@ -10,23 +10,6 @@ interface todolist {
     todolist: todo[]
 }
 
-// const initialState: todolist = {
-//     todolist: [
-//         {
-//             id: '1',
-//             todo: 'Learing React',
-//         },
-//         {
-//             id: '2',
-//             todo: 'Learing Golang',
-//         },
-//         {
-//             id: '3',
-//             todo: 'Learing Vue',
-//         },
-//     ]
-// }
-
 const initialState: todolist = {
     todolist: []
 }
