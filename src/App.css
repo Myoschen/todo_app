@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer components {
+  body {
+    @apply dark:bg-black/80;
+  }
+
   .App {
     @apply flex flex-col items-center;
   }

@@ -22,12 +22,12 @@ const TodoItem = (props: TodoItemProps) => {
     }
 
     return (
-        <li className='flex justify-between items-center p-4 bg-slate-300 rounded shadow'>
+        <li className='flex justify-between items-center p-4 bg-slate-300 dark:bg-slate-600 dark:text-white/80 rounded shadow'>
             <label className="inline-flex items-center">
                 <input className="hidden" onChange={handleCheckedTodo} checked={props.todo.checked} type="checkbox" />
-                <span className={`${props.todo.checked ? 'line-through' : 'no-underline'} font-black`}>{props.todo.todo}</span>
+                <span className={`${props.todo.checked ? 'line-through' : 'no-underline'} font-medium break-all`}>{props.todo.todo}</span>
             </label>
-            <button onClick={handleRemoveTodo} aria-label='close' className='text-rose-600 transition-colors duration-300'><ImCross /></button>
+            <button onClick={handleRemoveTodo} aria-label='close' className='ml-4 text-rose-500 transition-colors duration-300'><ImCross /></button>
         </li >
     )
 }
