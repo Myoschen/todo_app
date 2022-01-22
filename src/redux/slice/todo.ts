@@ -1,17 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { v4 as uuidv4 } from 'uuid';
 
-export interface todo {
-    id: string,
-    todo: string,
-    checked: boolean,
+export type Todo = {
+    id: string;
+    todo: string;
+    checked: boolean;
 }
 
-interface todolist {
-    todolist: todo[]
+export type TodoList = {
+    todolist: Todo[];
 }
 
-const initialState: todolist = {
+const initialState: TodoList = {
     todolist: []
 }
 

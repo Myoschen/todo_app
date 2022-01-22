@@ -5,14 +5,14 @@ import { useAppSelector } from './hooks';
 import Header from './components/Header';
 import InputBar from './components/InputBar';
 
-function App() {
+const App: React.FC = () => {
   const todolist = useAppSelector(state => state.todo.todolist);
 
   return (
     <div className="App">
-      <Header todo={todolist} />
+      <Header todolist={todolist} />
       <InputBar />
-      <TodoList todo={todolist} />
+      <TodoList todolist={todolist} />
     </div>
   );
 }

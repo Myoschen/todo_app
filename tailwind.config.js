@@ -2,9 +2,11 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   darkMode: 'media',
   theme: {
-    fontFamily: {
+    extend: {
+      fontFamily: {
+        'pacifico': 'Pacifico',
+      }
     },
-    extend: {},
   },
   plugins: [
     require('tailwindcss-textshadow')

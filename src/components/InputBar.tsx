@@ -3,7 +3,7 @@ import { addTodo } from '../redux/slice/todo';
 import { ImPlus } from 'react-icons/im'
 import { useAppDispatch } from '../hooks';
 
-const InputBar = () => {
+const InputBar: React.FC = () => {
     const [input, setInput] = useState('');
     const dispatch = useAppDispatch();
     const handleAddTodo = () => {
