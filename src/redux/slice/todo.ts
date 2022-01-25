@@ -1,18 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { v4 as uuidv4 } from 'uuid';
 
-export type Todo = {
-    id: string;
-    todo: string;
-    checked: boolean;
-}
-
-export type TodoList = {
-    todolist: Todo[];
-}
-
 const initialState: TodoList = {
-    todolist: []
+    list: []
 }
 
 export const todoSlice = createSlice({
@@ -20,15 +10,15 @@ export const todoSlice = createSlice({
     initialState,
     reducers: {
         addTodo: (state, action) => {
-            state.todolist.push({id: uuidv4(), todo: action.payload, checked: false})
+            state.list.push({id: uuidv4(), todo: action.payload, complete: false})
         },
         removeTodo: (state, action) => {
-            state.todolist = state.todolist.filter(todo => todo.id !== action.payload)
+            state.list = state.list.filter(todo => todo.id !== action.payload)
         },
         checkTodo: (state, action) => {
-            state.todolist.forEach(todo => {
+            state.list.forEach(todo => {
                 if(todo.id === action.payload){
-                    todo.checked = !todo.checked;
+                    todo.complete = !todo.complete;
                 }
             })
         } 

@@ -6,13 +6,13 @@ import Header from './components/Header';
 import InputBar from './components/InputBar';
 
 const App: React.FC = () => {
-  const todolist = useAppSelector(state => state.todo.todolist);
+  const todolist = useAppSelector(state => state.todo.list);
 
   return (
     <div className="App">
-      <Header todolist={todolist} />
+      <Header list={todolist} />
       <InputBar />
-      <TodoList todolist={todolist} />
+      <TodoList list={todolist} />
     </div>
   );
 }

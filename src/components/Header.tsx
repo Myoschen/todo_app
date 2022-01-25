@@ -1,11 +1,10 @@
 import React from 'react';
-import { TodoList } from '../redux/slice/todo';
 
 type HeaderProps = TodoList;
 
-const Header: React.FC<HeaderProps> = ({ todolist }) => {
+const Header: React.FC<HeaderProps> = ({ list }) => {
     const totalNumber = (() => {
-        let undoneList = todolist.filter(item => !item.checked)
+        let undoneList = list.filter(todo => !todo.complete)
         return undoneList.length;
     })();
     return (
