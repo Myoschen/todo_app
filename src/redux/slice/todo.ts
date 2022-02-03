@@ -16,11 +16,11 @@ export const todoSlice = createSlice({
             state.list = state.list.filter(todo => todo.id !== action.payload)
         },
         checkTodo: (state, action) => {
-            state.list.forEach(todo => {
-                if(todo.id === action.payload){
-                    todo.complete = !todo.complete;
-                }
-            })
+            state.list = state.list.map(todo => {
+                if (todo.id === action.payload)
+                    return Object.assign({}, todo, { complete: !todo.complete })
+                return todo;
+            });
         } 
     }
 });
