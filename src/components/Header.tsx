@@ -1,19 +1,23 @@
 import React from 'react';
 
-type HeaderProps = TodoList;
+type Props = {
+    list: Array<Todo>;
+};
 
-const Header: React.FC<HeaderProps> = ({ list }) => {
+const Header: React.FC<Props> = ({ list }) => {
     const totalNumber = (() => {
         let undoneList = list.filter(todo => !todo.complete)
         return undoneList.length;
     })();
     return (
-        <div className='flex justify-between items-center bg-slate-300 dark:bg-slate-600 dark:text-white/80 w-full p-4 mb-8 text-[#4f5358] text-shadow-xl'>
-            <h1 className='font-ubuntu text-2xl font-pacifico'>TODO</h1>
-            <span className='font-microsoft text-xl'>
-                {totalNumber} 個未完成
-            </span>
-        </div>
+        <header className='bg-slate-300 dark:bg-slate-600 dark:text-white/80 w-full text-[#4f5358] text-shadow-lg shadow-md'>
+            <div className="container flex items-center justify-between px-10 py-4 md:px-16">
+                <h1 className='text-2xl font-pacifico'>TODO</h1>
+                <span className='text-xl font-microsoft'>
+                    {totalNumber === 0 ? '已完成所有項目' : <><span>{totalNumber}</span> 個未完成</>}
+                </span>
+            </div>
+        </header>
     );
 };
 

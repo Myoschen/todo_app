@@ -3,7 +3,3 @@ interface Todo {
     todo: string;
     complete: boolean;
 }
-
-type TodoList = {
-    list: Todo[];
-}
